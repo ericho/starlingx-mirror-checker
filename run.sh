@@ -11,7 +11,7 @@ fi
 
 pushd stx-tools/centos-mirror-tools
 # Temporal hack
-git fetch https://git.openstack.org/openstack/stx-tools refs/changes/58/585858/3 && git checkout FETCH_HEAD
+git fetch https://git.openstack.org/openstack/stx-tools refs/changes/58/585858/6 && git checkout FETCH_HEAD
 if ! docker build -t stx-mirror -f Dockerfile .; then
     echo "Cannot create docker image"
     exit 1
