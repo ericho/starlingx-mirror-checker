@@ -10,11 +10,6 @@ fi
 # Create docker image for mirror check
 
 pushd stx-tools/centos-mirror-tools
-# Temporal hack
-
-git fetch https://git.openstack.org/openstack/stx-tools refs/changes/07/604407/1 && git cherry-pick FETCH_HEAD
-
-git fetch https://git.openstack.org/openstack/stx-tools refs/changes/45/604445/1 && git cherry-pick FETCH_HEAD
 
 if ! docker build -t stx-mirror -f Dockerfile .; then
     echo "Cannot create docker image"
