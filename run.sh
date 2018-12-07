@@ -9,7 +9,7 @@ fi
 
 # Create docker image for mirror check
 
-pushd stx-tools/centos-mirror-tools
+pushd stx-tools
 
 if ! docker build -t stx-mirror -f Dockerfile .; then
     echo "Cannot create docker image"
